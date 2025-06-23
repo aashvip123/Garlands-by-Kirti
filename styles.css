@@ -51,3 +51,49 @@ h1 {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optional, for subtle shadow */
 
 }
+.nav-links {
+  display: flex;
+  gap: 50px;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  z-index: 100;
+}
+.nav-links a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100 !important;
+  font-style: normal;
+  font-size: 1.5rem;
+  color: #f8f6f6;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #efb7b7;
+}
+.tagline-section {
+  width: 100%;
+  text-align: center;
+  padding: 60px 20px 40px;
+  background-color: #1a1b1d;
+}
+
+.tagline {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #ffffff;
+  max-width: 700px;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+}
