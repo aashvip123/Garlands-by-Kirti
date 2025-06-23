@@ -1,5 +1,53 @@
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #1a1b1d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  min-height: 100vh;
+  align-items: center; 
+}
+h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+  }
+}
+.logo {
+  width: 400px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.instagram-section h2 {
+  color: white;           
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
   text-align: center;
-  margin-top: 50px;
+  font-size: 1.5rem;
+}
+.instagram-section{
+    width: 50%;
+}
+.mainpic img{
+  width: 100vw;      /* makes the image 60% of its container's width */
+  height: auto;     /* keeps the aspect ratio */
+  display: block;   /* so margin auto works */
+  margin: 10px auto; /* centers horizontally and adds vertical space */
+  border-radius: 8px; /* optional, for rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optional, for subtle shadow */
+
 }
