@@ -1,99 +1,137 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background: #1a1b1d;
   color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+header {
+  height: 70px;
+  background: #1a1b1d;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 0;
-  min-height: 100vh;
-  align-items: center; 
-}
-h1 {
-  font-weight: 300;
-  font-size: 3rem;
-  margin-bottom: 40px;
-  letter-spacing: 8px;
-  text-transform: uppercase;
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-@media (max-width: 400px) {
-  h1 {
-    font-size: 2rem;
-    letter-spacing: 5px;
-    margin-bottom: 30px;
-  }
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
+
 .logo {
-  width: 400px;
+  width: 150px;
   height: auto;
-  margin-bottom: 20px;
+  margin-left: 20px;
 }
-.instagram-section h2 {
-  color: white;           
-  font-weight: 300;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 1.5rem;
-}
-.instagram-section{
-    width: 50%;
-}
-.mainpic img{
-  width: 100vw;      /* makes the image 60% of its container's width */
-  height: auto;     /* keeps the aspect ratio */
-  display: block;   /* so margin auto works */
-  margin: 10px auto; /* centers horizontally and adds vertical space */
-  border-radius: 8px; /* optional, for rounded corners */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optional, for subtle shadow */
 
-}
 .nav-links {
   display: flex;
   gap: 50px;
+  margin-right: 100px;
 }
 
-.navbar {
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 24px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  z-index: 100;
-}
 .nav-links a {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 100 !important;
-  font-style: normal;
-  font-size: 1.5rem;
-  color: #f8f6f6;
+  color: #e9d9d5;
   text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  font-size: 1.3rem;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #efb7b7;
 }
-.tagline-section {
-  width: 100%;
-  text-align: center;
-  padding: 60px 20px 40px;
-  background-color: #1a1b1d;
+
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 0 60px;
+  box-sizing: border-box;
 }
 
-.tagline {
+.hero {
+  background: url('images/vankey2.jpg') center / cover no-repeat fixed;
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero .tagline {
+  font-size: 2.5rem;
   font-weight: 300;
-  font-size: 2rem;
-  line-height: 1.6;
-  color: #ffffff;
-  max-width: 700px;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  line-height: 1.4;
   margin: 0 auto;
-  letter-spacing: 0.5px;
+  padding: 0 20px;
+  /* Movement feel */
+  transform: translateY(20px);
+  transition: transform 0.4s ease-in-out;
+}
+
+
+.instagram-section h2 {
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.instagram-section iframe {
+  width: 100%;
+  border: none;
+}
+
+.section-text {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.sides {
+  max-width: 100vw;
+  padding: 0 70px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #1a1b1d;
 }
